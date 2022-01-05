@@ -1,0 +1,11 @@
+{% extends "basic.html" %}
+{% block body_block %}<br><br>
+<div class="jumbotron">
+<h1>Welcome to the Registration Form</h1>
+<h3>Kindly register yourself</h3><br>
+    <a href="{% url 'form' %}" class="btn btn-lg btn-primary">Register Here</a>
+    <button type="button" class="btn btn-secondary btn-lg" disabled>Exit</button>
+
+</div>
+{% endblock %}
+

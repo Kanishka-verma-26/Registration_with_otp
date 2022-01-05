@@ -1,0 +1,26 @@
+{% extends 'basic.html' %}
+{% block body_block %}<br><br>
+
+<div jumbotron>
+    <form id="es" method="POST">
+      {% csrf_token %}
+      <div id="es1">
+        <div class="form-group">
+          <label for="exampleREmail1">To :</label>
+          <input type="email" class="form-control" id="exampleREmail1" aria-describedby="emailHelp" placeholder="Enter email" name="r_email">
+          <small id="emailHelp" class="form-text text-muted">Enter receiver's email.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleSubject">Subject :</label>
+          <input type="text" class="form-control" id="exampleSubject" placeholder="subject" name="sub">
+        </div>
+        <div class="form-group">
+          <label for="exampleText">Enter the message :</label>
+          <textarea rows = "3" class="form-control" id="exampleText" required name="msg"></textarea>
+        </div>
+        <button type="submit" class="btn btn-info">Send</button>
+      </div>
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "basic.html" %}
+{% block body_block %}<br><br>
+<div class="jumbotron">
+<h1>Users list</h1>
+{% for i in Registered_Users %}
+    {% if i.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'user_list' pk=post.pk %}">List</a>
+    {% else %}
+        <a class="btn btn-primary" href="{% url 'form' pk=post.pk %}">Register</a>
+    {% endif %}
+    {% endfor %}
+
+</div>
+{% endblock %}
