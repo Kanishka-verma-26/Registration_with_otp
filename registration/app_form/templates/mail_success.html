@@ -1,0 +1,16 @@
+{% extends "basic.html" %}
+{% block body_block %}<br><br>
+{% load static %}
+<img style="display: block;
+  margin-left: auto;
+  height: 300px;
+  margin-right: auto;
+  width: 450px;" align="center" src="{% static 'smiley.jpeg' %}" alt="success" height="400px" width="400px">
+<div class="jumbotron">
+
+<div style="display:inline">
+<h1 style="font-weight : bold">WOoHoO!</h1>
+    <h2>Mail sent successfully</h2>
+</div>
+</div>
+{% endblock %}

@@ -6,6 +6,7 @@
 	<p>Enter the code generated on the email you mentioned to log in!</p>
 
 <form method="post" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+	{% csrf_token %}
 	<input type="text" id="digit-1" name="dig1" data-next="digit-2" />
 	<input type="text" id="digit-2" name="dig2" data-next="digit-3" data-previous="digit-1" />
 	<input type="text" id="digit-3" name="dig3" data-next="digit-4" data-previous="digit-2" />
@@ -14,7 +15,7 @@
 	<input type="text" id="digit-5" name="dig5" data-next="digit-6" data-previous="digit-4" />
 	<input type="text" id="digit-6" name="dig6" data-previous="digit-5" /><br><br>
 
-<button type="button" class="btn btn-secondary">Submit</button>
+<button type="submit" class="btn btn-secondary">Submit</button>
 </form>
 </div>
 </div>
